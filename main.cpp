@@ -24,7 +24,6 @@ enum ComparisonRezult
   * \param y - compared number.
   * \return result comparison (equal , more , less).
   */
-
 int CompareNumbers (double x, double y)
 {
     const double epsilon = 1E-6;
@@ -46,7 +45,6 @@ int CompareNumbers (double x, double y)
   * \param x1 - the pointer to a double variable to which the root of a linear equation is passed.
   * \return number of solutions.
   */
-
 int SolveLinear (double b, double c, double* x1)
 {
     if (CompareNumbers (b, 0) == EQUALLY)
@@ -70,7 +68,6 @@ int SolveLinear (double b, double c, double* x1)
   * \param x2 - the pointer to a double variable to which the root of a quadratic equation is passed.
   * \return number of solutions.
   */
-
 int SolveQuadrant (double a, double b, double c, double* x1, double* x2)
 {
     if (CompareNumbers (a, 0) == EQUALLY)
@@ -132,7 +129,6 @@ void ClearInput ()
   * \param b - pointer to variables that are coefficients of a quadratic equation.
   * \param c - pointer to variables that are coefficients of a quadratic equation.
   */
-
 void InputCoefficients (double* a, double* b, double* c)
 {
     printf ("Enter the coefficients of the quadrant equation:  ");
@@ -150,7 +146,6 @@ void InputCoefficients (double* a, double* b, double* c)
   * \param x1 - pointer to variables that are the roots of the equation.
   * \param x2 - pointer to variables that are the roots of the equation.
   */
-
 void OutputRoots (int NumberSolutions, double* x1, double* x2)
 {
     switch (NumberSolutions)
