@@ -20,36 +20,35 @@ void Tests ()
 
         if (NumberSolutions == QuadraticTests[i].NumberSolutionsTest)
         {
-            if ((x1 != x1 && QuadraticTests[i].x1test != QuadraticTests[i].x1test) || CompareNumbersAccuracy (x1, QuadraticTests[i].x1test, accuracy) == EQUALLY)
+            if ((x1 != x1 && QuadraticTests[i].x1 != QuadraticTests[i].x1) || CompareNumbersAccuracy (x1, QuadraticTests[i].x1, accuracy) == EQUALLY)
             {
-                if ((x2 != x2 && QuadraticTests[i].x2test != QuadraticTests[i].x2test) || CompareNumbersAccuracy (x2, QuadraticTests[i].x2test, accuracy) == EQUALLY)
+                if ((x2 != x2 && QuadraticTests[i].x2 != QuadraticTests[i].x2) || CompareNumbersAccuracy (x2, QuadraticTests[i].x2, accuracy) == EQUALLY)
                 {
                     printf ("Test %d passed successfully.\n\n", i);
                 }
                 else
                 {
-                    printf ("Test %d failed.\n", i);
-                    printf ("The number of roots and the first root are the same, but in the case of the second, the program outputs the root %lg, with the correct root %lg.\n\n", QuadraticTests[i].x2test, x2);
+                    printf ("Test %d failed.\nThe number of roots and the first root are the same, but in the case of the second, the program outputs the root %lg,"
+                            "with the correct root %lg.\n\n", i, QuadraticTests[i].x2, x2);
                 }
             }
             else 
             {
-                if ((x2 != x2 && QuadraticTests[i].x2test != QuadraticTests[i].x2test) || CompareNumbersAccuracy (x2, QuadraticTests[i].x2test, accuracy) == EQUALLY)
+                if ((x2 != x2 && QuadraticTests[i].x2 != QuadraticTests[i].x2) || CompareNumbersAccuracy (x2, QuadraticTests[i].x2, accuracy) == EQUALLY)
                 {
-                    printf ("Test %d failed.\n", i);
-                    printf("The number of roots and the second root are the same, but in the case of the first one, the program outputs the root %lg, with the correct root %lg.\n\n", QuadraticTests[i].x1test, x1);
+                    printf("Test %d failed.\nThe number of roots and the second root are the same, but in the case of the first one, the program outputs the root %lg,"
+                           "with the correct root %lg.\n\n", i, QuadraticTests[i].x1, x1);
                 }
                 else
                 {
-                    printf ("Test %d failed.\n", i);
-                    printf("The number of roots is the same, but both roots are different from the correct ones. In the case of the first %lg, one is correct, and %lg are issued. In the case of the second %lg, one is correct, and %lg are issued.\n\n", QuadraticTests[i].x1test, x1, QuadraticTests[i].x2test, x2 );
+                    printf("Test %d failed.\nThe number of roots is the same, but both roots are different from the correct ones. In the case of the first %lg, one is correct, and %lg are issued."
+                           "In the case of the second %lg, one is correct, and %lg are issued.\n\n", i, QuadraticTests[i].x1, x1, QuadraticTests[i].x2, x2 );
                 }
             }
         }
         else
         {
-            printf("Test %d failed.\n", i);
-            printf("The program outputs the wrong number of roots.\n\n");
+            printf("Test %d failed.\nThe program outputs the wrong number of roots.\n\n", i);
         }
     }
 }

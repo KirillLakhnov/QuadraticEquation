@@ -39,5 +39,3 @@ int Isnan (const double a)
 {
     return a != a;
 }
-
-
