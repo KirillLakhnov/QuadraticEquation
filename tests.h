@@ -7,7 +7,8 @@
 
 /**
  * \brief TestsUnit - receiving the data necessary for testing the function solving quadratic equations.
- */ struct TestsUnit
+ */ 
+struct TestsUnit
 {
     double a;
     double b;

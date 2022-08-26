@@ -1,0 +1,24 @@
+all: 
+	g++ main.cpp common.cpp QuadraticEquation.cpp tests.cpp -o quadratic
+
+quadratic: main.o common.o QuadraticEquation.o tests.o
+	g++ main.o common.o QuadraticEquation.o tests.o -o quadratic
+
+main.o: main.cpp
+	g++ c main.cpp
+
+common.o: common.cpp
+	g++ c common.cpp
+
+QuadraticEquation.o: QuadraticEquation.cpp
+	g++ c QuadraticEquation.cpp
+
+tests.o: tests.cpp
+	g++ c tests.cpp
+
+clean:
+	rm -rf *.o quadratic
+
+
+
+
