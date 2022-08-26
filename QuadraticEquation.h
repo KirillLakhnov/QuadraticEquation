@@ -6,25 +6,31 @@
 #include <assert.h>
 #include "common.h"
 
+/**
+ * \brief  Solutions - the result of the function of solving the quadratic equation.
+ */
 enum Solutions
 {
-    ZERO_SOLUTION = 0,  /**< Enum value ZERO_SOLUTION 0 */
-    ONE_SOLUTION  = 1,  /**< Enum value ONE_SOLUTION  1 */
-    TWO_SOLUTION  = 2,  /**< Enum value TWO_SOLUTION  2 */
-    INF_SOLUTION  = 3,  /**< Enum value INF_SOLUTION  3 */
+    ZERO_SOLUTION = 0,  
+    ONE_SOLUTION  = 1,  
+    TWO_SOLUTION  = 2,  
+    INF_SOLUTION  = 3,  
 };
 
-/** \brief SolveLinear - the function solving linear equations
- *
- * This function receives two double numbers and one pointer to a double variable as input.
- * \param[in] b - сoefficient of the linear equation.
- * \param[in] c - сoefficient of the linear equation.
- * \param[out] x1 - the pointer to a double variable to which the root of a linear equation is passed.
- * \return number of solutions.
- */
-int SolveLinear (double b, double c, double* x1);
+//===================================================================================================
 
-/** \brief SolveQuadrant - the function that solves quadratic equations.
+/** \brief InputCoefficients - responsible for entering coefficient values by the user.
+ *
+ * This function receives three pointers to variables of type double as input.
+ * \param[in] a - pointer to variables that are coefficients of a quadratic equation.
+ * \param[in] b - pointer to variables that are coefficients of a quadratic equation.
+ * \param[in] c - pointer to variables that are coefficients of a quadratic equation.
+ */
+void InputCoefficients (double* a, double* b, double* c);
+
+//===================================================================================================
+
+/** \brief SolveQuadrant - solves quadratic equations.
  *
  * This function accepts three double numbers and two pointers to double variables as input&
  * \param[in] a - coefficient of the quadratic equation.
@@ -34,29 +40,27 @@ int SolveLinear (double b, double c, double* x1);
  * \param[out] x2 - the pointer to a double variable to which the root of a quadratic equation is passed.
  * \return number of solutions.
  */
-int SolveQuadrant (double a, double b, double c, double* x1, double* x2);
+int SolveQuadrant (const double a, const double b, const double c, double* x1, double* x2);
 
-/** \brief InputCoefficients - the function is responsible for entering coefficient values by the user.
+/** \brief SolveLinear - solves linear equations
  *
- * This function receives three pointers to variables of type double as input.
- * \param[in] a - pointer to variables that are coefficients of a quadratic equation.
- * \param[in] b - pointer to variables that are coefficients of a quadratic equation.
- * \param[in] c - pointer to variables that are coefficients of a quadratic equation.
+ * This function receives two double numbers and one pointer to a double variable as input.
+ * \param[in] b - сoefficient of the linear equation.
+ * \param[in] c - сoefficient of the linear equation.
+ * \param[out] x1 - the pointer to a double variable to which the root of a linear equation is passed.
+ * \return number of solutions.
  */
-void InputCoefficients (double* a, double* b, double* c);
+int SolveLinear (const double b, const double c, double* x1);
 
-/** \brief OutputRoots - the function that outputs the roots of a quadratic equation.
+//===================================================================================================
+
+/** \brief OutputRoots - outputs the roots of a quadratic equation.
  *
  * This function takes one int number and two pointers to variables of the double type as input.
  * \param[in] NumberSolutions - number of solutions of the quadratic equation.
- * \param[out] x1 - pointer to variables that are the roots of the equation.
- * \param[out] x2 - pointer to variables that are the roots of the equation.
+ * \param[in] x1 - pointer to variables that are the roots of the equation.
+ * \param[in] x2 - pointer to variables that are the roots of the equation.
  */
-void OutputRoots (int NumberSolutions, double* x1, double* x2);
-
-/** \brief Tests - the function that checks the operability of a function that solves quadratic equations.
- *
- */
-void Tests ();
+void OutputRoots (const int NumberSolutions, const double* x1, const double* x2);
 
 #endif // QUADRATIC_EQUATION_H
