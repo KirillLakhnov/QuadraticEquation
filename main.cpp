@@ -1,4 +1,4 @@
-#define NDEBUG 
+// #define NDEBUG
 
 #include "QuadraticEquation.h"
 #include "tests.h"
