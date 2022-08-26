@@ -1,8 +1,8 @@
 release: 
-	g++ -DNDEBUG main.cpp common.cpp QuadraticEquation.cpp tests.cpp
+	g++ -DNDEBUG main.cpp common.cpp QuadraticEquation.cpp tests.cpp 
 
 debug:
-	g++ main.cpp common.cpp QuadraticEquation.cpp tests.cpp
+	g++ main.cpp common.cpp QuadraticEquation.cpp tests.cpp 
 
 main.o: main.cpp
 	g++ c main.cpp
@@ -15,6 +15,3 @@ QuadraticEquation.o: QuadraticEquation.cpp
 
 tests.o: tests.cpp
 	g++ c tests.cpp
-
-clean:
-	rm -rf *.o quadratic
