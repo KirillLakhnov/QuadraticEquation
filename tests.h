@@ -22,4 +22,11 @@ struct TestsUnit
  */
 void Tests ();
 
+/**
+ * @brief FunctionTestsBody - the function that performs a single test of a function that solves square equations.
+ * 
+ * @param QuadraticTests - structure containing data for tests.
+ */
+void FunctionTestsBody (struct TestsUnit QuadraticTests, int i, const double accuracy); 
+
 #endif // TESTS_H
