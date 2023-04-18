@@ -1,11 +1,14 @@
-#define NDEBUG
+//#define DEBUG
 
 #include "QuadraticEquation.h"
-#include "tests.h"
+
+#ifdef DEBUG
+    #include "tests.h"
+#endif
 
 int main (int argc, const char* argv[])
 {  
-#ifndef NDEBUG
+#ifdef DEBUG
     Tests ();
 #else
     double a = NAN, b = NAN, c = NAN;
