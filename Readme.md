@@ -6,4 +6,6 @@
 
 Для сборки **Debug** - ``make debug``. В данном режиме отработано использование **Unit** тестов.
 
+
+
 ![Exemple](readme_files/Readme_exemple.png)
