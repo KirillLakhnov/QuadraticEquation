@@ -6,6 +6,7 @@
 
 Для сборки **Debug** - ``make debug``. В данном режиме отработано использование **Unit** тестов.
 
+## Пример работы
 Пример работы программы в режиме **Release**:
 
 ![Exemple](readme_files/Readme_exemple.png)
